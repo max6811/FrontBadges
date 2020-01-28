@@ -25,10 +25,11 @@ const api = {
     badges: {
         list() {
             // return [];
-            throw new Error('Not found');
-            // return callApi('/badges');
+            // throw new Error('Not found');
+            return callApi('/badges');
         },
         create(badge) {
+            // throw new Error('500: server error');
             return callApi(`/badges`, {
                 method: 'POST',
                 body: JSON.stringify(badge),
